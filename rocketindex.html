@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layered Lottie Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/9Qq41k7Sb6Oul03n6fE0/pub/h9MtZgEhZLlrthVqu73n.png') no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+        }
+        #lottie-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <div id="lottie-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script>
+        // Load the Lottie animation
+        const container = document.getElementById('lottie-container');
+        lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://lottie.host/embed/4a23dc53-3365-44f7-94ed-d70a59bdb9f8/Yc7yHXe5cG.json'
+        });
+    </script>
+</body>
+</html>
